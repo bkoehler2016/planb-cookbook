@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { addRecipe } from "../actions";
 import ShowArrayItem from "./ShowArrayItem";
+import { Form } from "reactstrap";
 
 class RecipeForm extends React.Component {
   state = {
@@ -145,7 +146,7 @@ class RecipeForm extends React.Component {
     return (
       <div className="recipe-form">
         <h2>Create New Recipe</h2>
-        <form onSubmit={this.submitRecipe}>
+        <Form onSubmit={this.submitRecipe}>
           <input
             placeholder="Title"
             type="text"
@@ -257,7 +258,7 @@ class RecipeForm extends React.Component {
           ))}
 
           <button type="submit">Add Recipe</button>
-        </form>
+        </Form>
       </div>
     );
   }
