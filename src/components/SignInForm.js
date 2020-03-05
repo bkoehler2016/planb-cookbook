@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { logIn } from "../actions";
 import { withRouter } from "react-router";
-
+import logo from "../assets/secret-cookbook-logo.png";
 import "../less/SignInForm.less";
 
 class SignInForm extends React.Component {
@@ -47,7 +47,9 @@ class SignInForm extends React.Component {
             <>
               <form className="login-form" onSubmit={this.logIn}>
                 <div className="login-form-header">
-                  <div className="login-logo-wrapper"></div>
+                  <div className="login-logo-wrapper">
+                    <img src={logo} alt="logo" className="login-logo" />
+                  </div>
                   <h3>Log in to</h3>
                   <h2> Secret Cookbook</h2>
                 </div>

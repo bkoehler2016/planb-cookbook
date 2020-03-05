@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
+import logo from "../assets/secret-cookbook-logo.png";
 
 const Navigation = ({ history }) => {
   const signOut = () => {
@@ -10,6 +11,7 @@ const Navigation = ({ history }) => {
   return (
     <nav className="nav">
       <div className="nav-logo-set">
+        <img src={logo} alt="logo" className="nav-logo" />
         <p className="nav-title">Secret Cookbook</p>
       </div>
       <div className="links">

@@ -2,7 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { signUp } from "../actions";
-
+import logo from "../assets/secret-cookbook-logo.png";
 import "../less/SignUpForm.less";
 
 class SignUpForm extends React.Component {
@@ -48,7 +48,9 @@ class SignUpForm extends React.Component {
             <>
               <form className="signup-form" onSubmit={this.signUp}>
                 <div className="signup-form-header">
-                  <div className="signup-logo-wrapper"></div>
+                  <div className="signup-logo-wrapper">
+                    <img src={logo} alt="logo" className="signup-logo" />
+                  </div>
                   <h3>Welcome to</h3>
                   <h2>Secret Cookbook</h2>
                 </div>
