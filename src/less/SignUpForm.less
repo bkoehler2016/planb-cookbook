@@ -1,0 +1,78 @@
+.signup-page-wrapper {
+    width: 80vw;
+    height: 80vh;
+    background-color: @dark;
+    padding: 5vw 10vw 10vw;
+}
+
+.signup-form-wrapper {
+    margin: 10vh auto;
+    width: 80vw;
+    height: 70vh;
+    background-image: url(../assets/brooke-lark-230140-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: @gray;
+    border-radius: 10px;
+    position: relative;
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, .5),
+        0 0 15px rgba(0, 0, 0, .4);
+}
+
+.signup-form {
+    position: absolute;
+    right: 5vw;
+    top: 5%;
+    width: 35vw;
+
+    input {
+        width: 94%;
+        color: darkslategray;
+        padding: .5em;
+        border-radius: 5px;
+        border: 2px solid @light;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    p {
+        margin: 1em 0 .1em;
+    }
+}
+
+.signup-form-header {
+    text-align: center;
+
+    h2 {
+        font-size: 1.5em;
+        color: @dark;
+    }
+}
+
+.signup-logo {
+    display: block;
+    height: 70px;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.signup-btn {
+    .btn-mixin(@btn-width: 100%);
+    margin: 1em auto 3px;
+
+}
+
+.signup-small-font {
+    font-size: 0.85em;
+    margin: 0px;
+    text-align: right;
+}
+
+.signup-link {
+    color: @dark;
+}

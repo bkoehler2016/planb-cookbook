@@ -1,0 +1,81 @@
+.login-page-wrapper {
+    width: 80vw;
+    height: 80vh;
+    background-color: @dark;
+    padding: 5vw 10vw 10vw;
+}
+
+.login-form-wrapper {
+    margin: 10vh auto;
+    width: 80vw;
+    height: 70vh;
+    background-image: url(../assets/brooke-lark-230140-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #444;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.login-form {
+    position: absolute;
+    right: 5vw;
+    top: 10%;
+    width: 35vw;
+
+    input {
+        width: 94%;
+        color: darkslategray;
+        padding: 0.5em;
+        border-radius: 5px;
+        border: 2px solid @light;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    p {
+        margin: 0.9em 0 0.1em;
+    }
+
+    .login-small-font {
+        font-size: 0.85em;
+        text-align: right;
+        margin: 5px;
+    }
+}
+
+.login-form-header {
+    text-align: center;
+
+    h2 {
+        font-size: 1.5em;
+        color: @dark;
+        margin-top: 0.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        margin-top: 0.5em;
+    }
+}
+
+.login-logo {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.login-btn {
+    .btn-mixin(@btn-width: 100%);
+    margin: 1.5em auto 3px;
+}
+
+.login-link {
+    color: @dark;
+}

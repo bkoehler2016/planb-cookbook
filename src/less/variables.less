@@ -1,0 +1,34 @@
+  // Utility
+
+  @rtb: 2px dashed red;
+
+  @dark: #136B72;
+  @dark2: lighten(@dark, 10);
+  @medium: #AAE4EC;
+  @light: #D8E4DA;
+  @orange: #BE8975;
+  @red: #D4544A;
+  @gray: #444;
+
+  @phone: ~"(max-width:550px)";
+  @mobile: ~"(max-width:850px)";
+
+  //Mixins
+  .btn-mixin (@btn-bg-color: @dark2, @btn-txt-color: @light, @btn-width: 80%, @btn-height: auto) {
+      font-size: 1em;
+      padding: .5em;
+      border-radius: 5px;
+      background-color: @btn-bg-color;
+      color: @btn-txt-color;
+      text-align: center;
+      width: @btn-width;
+      height: @btn-height;
+      border: 0;
+
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+
+      &:hover {
+          background-color: @dark;
+      }
+  }
