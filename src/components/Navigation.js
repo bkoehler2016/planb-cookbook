@@ -10,7 +10,6 @@ const Navigation = ({ history }) => {
   return (
     <nav className="nav">
       <div className="nav-logo-set">
-        <img src={logo} alt="logo" className="nav-logo" />
         <p className="nav-title">Secret Cookbook</p>
       </div>
       <div className="links">

@@ -47,9 +47,7 @@ class SignInForm extends React.Component {
             <>
               <form className="login-form" onSubmit={this.logIn}>
                 <div className="login-form-header">
-                  <div className="login-logo-wrapper">
-                    <img src={logo} alt="logo" className="login-logo" />
-                  </div>
+                  <div className="login-logo-wrapper"></div>
                   <h3>Log in to</h3>
                   <h2> Secret Cookbook</h2>
                 </div>
