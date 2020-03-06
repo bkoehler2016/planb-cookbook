@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { addRecipe } from "../actions";
 import ShowArrayItem from "./ShowArrayItem";
-import { Form } from "reactstrap";
+import { Button } from "reactstrap";
 
 class RecipeForm extends React.Component {
   state = {
@@ -146,7 +146,7 @@ class RecipeForm extends React.Component {
     return (
       <div className="recipe-form">
         <h2>Create New Recipe</h2>
-        <Form onSubmit={this.submitRecipe}>
+        <form onSubmit={this.submitRecipe}>
           <input
             placeholder="Title"
             type="text"
@@ -176,11 +176,7 @@ class RecipeForm extends React.Component {
 
             {this.state.ingredients.map((ingredient, index) => (
               <div className="ingredient">
-                <ShowArrayItem
-                  listNum={index + 1}
-                  item={ingredient}
-                  key={index}
-                />
+                <ShowArrayItem item={ingredient} key={index} />
                 <button onClick={e => this.deleteIngredient(e, index)}>
                   Delete Ingredient
                 </button>
@@ -210,36 +206,7 @@ class RecipeForm extends React.Component {
               </div>
             ))}
           </div>
-          <div className="tags-wrapper">
-            <h3>Tags</h3>
-            <div className="tags">
-              {this.state.commonTags.map((tag, index) => {
-                return (
-                  <button
-                    key={index}
-                    onClick={e => this.addTagByButton(e, tag)}
-                  >
-                    {tag}
-                  </button>
-                );
-              })}
-              <input
-                type="text"
-                name="tag"
-                onChange={this.handleChanges}
-                value={this.state.tag}
-              />
-              <button onClick={this.addCustomTag}>Add Custom Tag</button>
-              {this.state.tags.map((tag, index) => (
-                <div className="tag">
-                  <p>{tag}</p>
-                  <button onClick={e => this.deleteTag(e, index)}>
-                    Delete Tag
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
+
           <h3>Note:</h3>
           <input
             type="text"
@@ -258,7 +225,7 @@ class RecipeForm extends React.Component {
           ))}
 
           <button type="submit">Add Recipe</button>
-        </Form>
+        </form>
       </div>
     );
   }
